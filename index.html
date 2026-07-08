@@ -252,28 +252,6 @@
     object-fit: contain; border-radius: 2px;
   }
 
-  /* ── THESIS ── */
-  .thesis-opener {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; font-style: italic; font-weight: 400;
-    line-height: 1.55; color: var(--brown);
-    border-left: 2px solid var(--sage);
-    padding-left: 20px; border-radius: 0;
-    margin-bottom: 24px; max-width: 520px;
-  }
-  .thesis-list {
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .thesis-item {
-    font-size: 14px; color: var(--brown-mid);
-    line-height: 1.7;
-    display: flex; align-items: flex-start; gap: 12px;
-  }
-  .thesis-item::before {
-    content: '·';
-    color: var(--sage); font-size: 20px;
-    line-height: 1.2; flex-shrink: 0; margin-top: -1px;
-  }
 
   /* ── WORK ── */
   .work-list { display: flex; flex-direction: column; }
@@ -555,7 +533,6 @@
   <!-- SIDENAV -->
   <nav class="sidenav">
     <a href="#about" class="active">About</a>
-    <a href="#thesis">Thesis</a>
     <a href="#work">Work</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
@@ -581,17 +558,17 @@
       <div class="hero-left">
         <div>
           <h1 class="hero-h1">Ketaki<br>Gha<span class="italic">tole</span></h1>
-          <p class="hero-tag">Building at the intersection of AI &amp; Biology</p>
+          <p class="hero-tag">AI x Biology</p>
         </div>
         <div class="hero-bottom">
           <p class="hero-desc">
             I have a background in computational biology from Carnegie Mellon and experience across the biotech industry and research labs. My work spans bioinformatics, AI, and product development. I’ve built tools that help scientific teams streamline and automate complex workflows. I also write about advances in AI for biotech, with a focus on practical applications for scientific teams.
           </p>
           <p class="hero-desc">
-            Right now, I’m building a platform to help biotech teams preserve context and reasoning across fragmented information, and make better decisions using the knowledge they already have
+            Right now, I’m interested in improving how we capture and utilize fragmented data, and make better decisions using the knowledge they already have
           </p>
           <p class="hero-desc">
-            I'm talking to biotech teams who struggle to make sense of their own data over time. If that resonates, I'd love to connect
+            If you're a biotech professional who struggles to make sense of your own data over time, I'd love to connect.
           </p>
           <div class="hero-actions">
             <a href="https://www.linkedin.com/in/ketaki-g/" class="btn-dark">Connect on LinkedIn</a>
@@ -602,24 +579,6 @@
       <div class="hero-photo">
         <img src="photos/ketaki-profile-photo.png" alt="Ketaki Ghatole">
       </div>
-    </section>
-
-    <!-- THESIS -->
-    <section id="thesis" class="sec">
-      <div class="sec-head">
-        <div class="sec-head-left">
-          <span class="sec-num">01</span>
-          <span class="sec-title">Thesis</span>
-        </div>
-      </div>
-      <div class="thesis-opener">
-        Building a reasoning layer for <em>biotech</em> data
-      </div>
-      <div class="thesis-list">
-        <div class="thesis-item">Biotech teams lose the why behind their decisions, data gets recorded but the reasoning doesn't.
-        <div class="thesis-item">When a project pivots, or a meeting ends without good notes, that context disappears and the next person starts from scratch. 
-        <div class="thesis-item"></div>A knowledge layer can capture institutional reasoning and bring it back up when teams need it, so people can make better decisions using context they already have.</div>
-        <div class="thesis-item"></div>I'm currently prototyping and talking to teams across biotech to understand this problem better. </div>
     </section>
 
     <!-- WORK -->
@@ -959,7 +918,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     filterProjects('ai');
     document.querySelector('.filter-btn').classList.add('active');
-    const sections = ['about','thesis','work','education','projects','writing','life','contact'];
+    const sections = ['about','work','education','projects','writing','life','contact'];
     const links = document.querySelectorAll('.sidenav a[href^="#"]');
     const els = sections.map(id => document.getElementById(id)).filter(Boolean);
     const LINE = 150; // px below the top of the viewport
